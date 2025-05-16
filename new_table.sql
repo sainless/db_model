@@ -31,7 +31,7 @@ CREATE TABLE personal_information (
 
 CREATE TABLE education (
     id_education SERIAL PRIMARY KEY,
-    year text,
+    year_e text,
     short_text varchar(100)
 );
 
@@ -39,14 +39,14 @@ CREATE TABLE education (
 CREATE TABLE notes (
     id_user SERIAL PRIMARY KEY,
     employment varchar(10),
-    salary float
+    salary float default 0.0
 );
 
 
 CREATE TABLE additional_information (
     id_additional SERIAL PRIMARY KEY,
     personal_qualities VARCHAR(50) NOT NULL ,
-    description text NOT NULL,
+    description_a text NOT NULL,
     hobby VARCHAR(120),
 );
 
