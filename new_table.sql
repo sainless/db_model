@@ -1,11 +1,18 @@
-CREATE TABLE users (
-    id_user SERIAL PRIMARY KEY,
-    login_user VARCHAR(50) NOT NULL UNIQUE,
-    password_user VARCHAR(100) NOT NULL,
-    full_name VARCHAR(100),
-    data_registration TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-    profile_photo VARCHAR(111)
+CREATE TABLE posts(
+    post_id SERIAL PRIMARY KEY,
+    author VARCHAR(50) NOT NULL UNIQUE, -- автор статьи
+    title VARCHAR(100) NOT NULL UNIQUE, -- название статьи
+    date_added VARCHAR(33) NOT NULL, -- дата добавления статьи
+    reading_time VARCHAR(100), -- время прочтения статьи
+    views Integer NOT NULL UNIQUE, -- кол-во просмотров
+    tags text, -- теги к статьи
+    profile_photo VARCHAR(111), -- Превьюшка(изображение)
+    likes INTEGER, -- кол-во просмотров
+    favourites INTEGER, -- количество избранных
+    shared INTEGER, -- количество 'репостов'
+    comments INTEGER -- количество комментов
 );
+
 
 
 CREATE TABLE base_information (
