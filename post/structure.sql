@@ -19,7 +19,7 @@ create table comments(
     post_id INTEGER REFERENCES posts(post_id),
     author VARCHAR(50) NOT NULL UNIQUE, -- автор коммента
     date_added VARCHAR(33) NOT NULL, -- дата добавления коммента
-    description_t VARCHAR(200) -- описание коммента
+    description_t VARCHAR(200), -- описание коммента
     likes INT, -- количество лайков
     dislikes INT -- количество дизлайков
 )
